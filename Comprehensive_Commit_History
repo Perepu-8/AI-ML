@@ -1,0 +1,44 @@
+Commit History for SMS Spam Detector Project
+
+1. Initial dataset import and project setup
+   - Added `spam.csv` dataset to the workspace.
+   - Created initial project structure with core files.
+   - Installed necessary Python libraries and validated the runtime environment.
+
+2. Added preprocessing and text transformation pipeline
+   - Implemented `transform_text()` in `sms_spam_detector_model.py`.
+   - Added lowercase conversion, tokenization, stopword removal, alphanumeric filtering, and stemming.
+   - Included NLTK resource downloads (`punkt`, `stopwords`).
+
+3. Built training pipeline and feature extraction
+   - Loaded and cleaned labeled SMS data from `spam.csv`.
+   - Dropped unused dataset columns and renamed target/text fields.
+   - Added `LabelEncoder` to encode spam/ham labels.
+   - Added TF-IDF vectorization with `TfidfVectorizer(max_features=3000)`.
+
+4. Added multiple classification models and evaluation
+   - Defined several classifiers: SVC, KNN, MultinomialNB, DecisionTree, LogisticRegression, RandomForest, AdaBoost, Bagging, ExtraTrees, GradientBoosting, and XGBoost.
+   - Implemented training loop that calculates accuracy and precision for each model.
+   - Added results logging and performance comparison.
+
+5. Added voting ensemble and export functionality
+   - Added soft VotingClassifier to combine best models.
+   - Trained and evaluated the voting ensemble on the same dataset.
+   - Added model export using `pickle` for `vectorizer.pkl` and `model.pkl`.
+
+6. Created terminal runtime script
+   - Added `main.py` for loading saved vectorizer and model.
+   - Implemented simple user prompt for SMS text input.
+   - Added prediction output as `spam` or `ham`.
+   - Simplified the CLI flow for easy use without arguments.
+
+7. Added documentation and project guide
+   - Created `README.MD` with project overview, features, dependencies, setup steps, run instructions, and testing examples.
+   - Added safe/ham and spam sample messages for manual verification.
+
+8. Cleanup and final review
+   - Verified working file names and paths.
+   - Confirmed `main.py` loads saved objects and classifies new messages.
+   - Ensured the README includes project structure and troubleshooting notes.
+
+Note: This commit history document is a comprehensive summary of the project development flow and intended file-level changes. It can be used to understand how the project evolved from data preparation to a saved model runtime. 
