@@ -4,7 +4,6 @@ SMS Spam Detection Report
 <br>
 I chose to solve the problem of classifying SMS messages as either spam or ham (safe). The project builds a lightweight machine learning pipeline that takes raw SMS text, processes it, and predicts whether the message is unwanted spam.
 <br>
-
 2. Why It Matters:
 <br>
 Spam messages remain a major source of fraud, phishing, and unwanted interruption on mobile devices.
